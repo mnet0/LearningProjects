@@ -9,8 +9,13 @@ def computepay(hours, rate) :
 
 hours = input('Enter your hours:')
 rate = input('Enter your rate:')
-flhours = float(hours)
-flrate = float(rate)
+
+try:
+    flhours = float(hours)
+    flrate = float(rate)
+except:
+    print("Error, please enter numeric input!")
+    quit()
 
 finalpay = computepay(flhours, flrate)
 
