@@ -5,7 +5,7 @@ try:
     flhours = float(hours)
     flrate = float(rate)
 except:
-    print("Error, please enter numeric input!")
+    print("Error, please enter numeric input")
     quit()
 
 if flhours > 40 :
