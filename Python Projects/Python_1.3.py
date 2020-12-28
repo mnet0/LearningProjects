@@ -1,8 +1,12 @@
 hours = input('Enter your hours:')
 rate = input('Enter your rate:')
 
-flhours = float(hours)
-flrate = float(rate)
+try:
+    flhours = float(hours)
+    flrate = float(rate)
+except:
+    print("Error, please enter numeric input!")
+    quit()
 
 if flhours > 40 :
     print('Overtime')
