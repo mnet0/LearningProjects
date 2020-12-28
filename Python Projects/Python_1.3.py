@@ -9,12 +9,12 @@ except:
     quit()
 
 if flhours > 40 :
-    print('Overtime')
+    # print('Overtime')
     regularpay = flrate * flhours
     overtimepay = (flhours - 40.0) * (flrate * 0.5)
     pay = regularpay + overtimepay
 else:
-    print('Regular')
+    # print('Regular')
     pay = flhours * flrate
 
 print('Pay:', pay)
