@@ -1,7 +1,7 @@
-def computepay(hours, rate) :
-    if hours > 40 :
+def computepay(hours, rate, overtime, multiplier) :
+    if hours > overtime :
         regularpay = rate * hours
-        overtimepay = (hours - 40.0) * (rate * 0.5)
+        overtimepay = (hours - overtime) * (rate * (multiplier - 1.0))
         pay = regularpay + overtimepay
     else:
         pay = hours * rate
@@ -9,16 +9,18 @@ def computepay(hours, rate) :
 
 hours = input('Enter your weekly hours:')
 overtime = input('Enter the number of hours before overtime kicks in:')
-multiplier = input('Enter the multiplier for pay in overtime hours:')
+multiplier = input('Enter the multiplier for pay on your overtime hours:')
 rate = input('Enter your hourly rate:')
 
 try:
+    flovertime = float(overtime)
+    flmultiplier = float(multiplier)
     flhours = float(hours)
     flrate = float(rate)
 except:
     print("Error, please enter numeric input!")
     quit()
 
-finalpay = computepay(flhours, flrate)
+finalpay = computepay(flhours, flrate, flovertime, flmultiplier)
 
 print('Pay:', finalpay)
