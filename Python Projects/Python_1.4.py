@@ -7,8 +7,8 @@ def computepay(hours, rate) :
         pay = hours * rate
     return pay    
 
-hours = input('Enter your hours:')
-rate = input('Enter your rate:')
+hours = input('Enter your weekly hours:')
+rate = input('Enter your hourly rate:')
 
 try:
     flhours = float(hours)
