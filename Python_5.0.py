@@ -2,6 +2,7 @@ fname = input('Enter file name: ')
 if len(fname) < 1 : fname = 'intro.txt'
 handle = open(fname)
 
+# punctuation = {',', '.', ':', '!', '?', '(', ')'}
 di = dict()
 
 for line in handle:
